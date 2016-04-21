@@ -1,0 +1,78 @@
+import java.util.Scanner;
+/**
+ * Write a description of class Battleship here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Battleship
+{
+    private int[][] board;
+    private static final char EMPTY = ' ';
+    
+    public Battleship(int rows, int col)
+    {
+        board = new int[rows][col];
+    }
+    
+    public void setBoard()
+    {
+        for(int row = 0; row < board.length; row++)
+        {
+            for(int col = 0; col < board[row].length; col++)
+            {
+                board[row][col] = EMPTY;
+            }
+        }
+    }
+    
+    public String printBoard(boolean flag)
+    {
+        
+        String str = "";
+        
+        //print out the values in each column and row
+        for(int row=0; row < board.length; row++)
+        {
+            for(int col=0; col < board[row].length; col++)
+            {
+                str += board[row][col];
+                if(col != board[row].length - 1)
+                    str += "|";
+            }
+            str += "\n";
+            
+            //draw separator
+            if(row != board.length - 1)
+            {
+                //draw separator
+                for(int col=0; col < board[row].length; col++)
+                {
+                    str += "—";
+                    if(col != board[row].length - 1)
+                         str += "+";
+                }
+                str += "\n";
+            }
+            
+            
+        }
+        
+        return str;
+    }
+    
+    public boolean over()
+    {
+        return true;
+    }
+    
+    public void makeGuess()
+    {
+        
+    }
+    
+    public void printStatistics()
+    {
+        
+    }
+}
