@@ -1,0 +1,13 @@
+/**
+ * Write a description of class BattleshipPiece here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class BattleshipPiece extends Ship
+{
+    public BattleshipPiece()
+    {
+        super(4);
+    }
+}
